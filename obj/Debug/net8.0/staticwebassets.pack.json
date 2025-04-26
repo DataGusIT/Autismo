@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\FerramentaAutismo.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\wwwroot\\css\\Home\\style.css",
+      "PackagePath": "staticwebassets\\css\\Home\\style.css"
+    },
+    {
       "Id": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

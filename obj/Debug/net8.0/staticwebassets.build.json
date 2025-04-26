@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "epZQvDFnRWTzetbx8gR2cxL4ZpCuuFI/cJ3mdNJzk6I=",
+  "Hash": "Br3DAtMQU5lPhp1eZT7LFJ64GT/yYMq7c5Wi8eIEu7k=",
   "Source": "FerramentaAutismo",
   "BasePath": "_content/FerramentaAutismo",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\FerramentaAutismo.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\wwwroot\\css\\Home\\style.css",
+      "SourceId": "FerramentaAutismo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\wwwroot\\",
+      "BasePath": "_content/FerramentaAutismo",
+      "RelativePath": "css/Home/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Home\\style.css"
     },
     {
       "Identity": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\wwwroot\\css\\site.css",

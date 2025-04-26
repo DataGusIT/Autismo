@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{35DBCC6B-7ABA-4186-BA0D-6C13D16BAC4B}|FerramentaAutismo.csproj|c:\\users\\gusta\\source\\repos\\ferramentaautismo\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{35DBCC6B-7ABA-4186-BA0D-6C13D16BAC4B}|FerramentaAutismo.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35DBCC6B-7ABA-4186-BA0D-6C13D16BAC4B}|FerramentaAutismo.csproj|c:\\users\\gusta\\source\\repos\\ferramentaautismo\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{35DBCC6B-7ABA-4186-BA0D-6C13D16BAC4B}|FerramentaAutismo.csproj|solutionrelative:views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{35DBCC6B-7ABA-4186-BA0D-6C13D16BAC4B}|FerramentaAutismo.csproj|c:\\users\\gusta\\source\\repos\\ferramentaautismo\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{35DBCC6B-7ABA-4186-BA0D-6C13D16BAC4B}|FerramentaAutismo.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35DBCC6B-7ABA-4186-BA0D-6C13D16BAC4B}|FerramentaAutismo.csproj|c:\\users\\gusta\\source\\repos\\ferramentaautismo\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{35DBCC6B-7ABA-4186-BA0D-6C13D16BAC4B}|FerramentaAutismo.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{35DBCC6B-7ABA-4186-BA0D-6C13D16BAC4B}|FerramentaAutismo.csproj|c:\\users\\gusta\\source\\repos\\ferramentaautismo\\wwwroot\\css\\home\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{35DBCC6B-7ABA-4186-BA0D-6C13D16BAC4B}|FerramentaAutismo.csproj|solutionrelative:wwwroot\\css\\home\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{35DBCC6B-7ABA-4186-BA0D-6C13D16BAC4B}|FerramentaAutismo.csproj|c:\\users\\gusta\\source\\repos\\ferramentaautismo\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -30,24 +38,54 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml.css",
+              "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml.css",
+              "ToolTip": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml.css",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAswDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-04-26T22:04:25.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\wwwroot\\css\\Home\\style.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\Home\\style.css",
+              "ToolTip": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\wwwroot\\css\\Home\\style.css",
+              "RelativeToolTip": "wwwroot\\css\\Home\\style.css",
+              "ViewState": "AgIAAB8DAAAAAAAAAAAswEUDAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-04-26T22:01:09.765Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
               "ToolTip": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\wwwroot\\css\\site.css",
               "RelativeToolTip": "wwwroot\\css\\site.css",
-              "ViewState": "AgIAAFEDAAAAAAAAAAAswHcDAAABAAAAAAAAAA==",
+              "ViewState": "AgIAADQAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-04-26T21:34:19.122Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -55,51 +93,45 @@
               "RelativeToolTip": "Controllers\\HomeController.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAxwDMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T21:33:58.089Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-26T21:33:58.089Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAK0BAAAAAAAAAAAAAMMBAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAMMBAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-26T21:33:46.991Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FerramentaAutismo",
+              "DocumentIndex": 6,
+              "Title": "FerramentaAutismo.csproj",
               "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\FerramentaAutismo.csproj",
               "RelativeDocumentMoniker": "FerramentaAutismo.csproj",
               "ToolTip": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\FerramentaAutismo.csproj",
               "RelativeToolTip": "FerramentaAutismo.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-26T21:31:28.048Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-26T21:31:28.048Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAEEBAAAAAAAAAAAAAEEBAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-26T21:24:14.19Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             }
           ]
         }
