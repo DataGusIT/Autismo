@@ -18,6 +18,26 @@ namespace FerramentaAutismo.Controllers
             return View();
         }
 
+        public IActionResult Ferramentas()
+        {
+            return View();
+        }
+
+        public IActionResult Duvidas()
+        {
+            return View();
+        }
+
+        public IActionResult Contatos()
+        {
+            return View();
+        }
+
+        public IActionResult Sobre()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

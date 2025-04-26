@@ -1,49 +1,369 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - FerramentaAutismo</title>
+    <title>@ViewData["Title"] - CentroEspectro</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/FerramentaAutismo.styles.css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        :root {
+            --primary: #6a3ea1;
+            --primary-dark: #5b2e92;
+            --primary-light: #9a6dd7;
+            --secondary: #3a86ff;
+            --accent: #ffd60a;
+            --success: #4caf50;
+            --info: #2196f3;
+            --warning: #ff9800;
+            --danger: #f44336;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --gray-100: #f8f9fa;
+            --gray-200: #e9ecef;
+            --gray-300: #dee2e6;
+            --gray-400: #ced4da;
+            --gray-500: #adb5bd;
+            --gray-600: #6c757d;
+            --gray-700: #495057;
+            --gray-800: #343a40;
+            --gray-900: #212529;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9fd;
+            color: var(--gray-700);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        
+        /* Header & Navigation */
+        .navbar {
+            background-color: #fff;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            padding: 0.7rem 1rem;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: var(--primary) !important;
+            display: flex;
+            align-items: center;
+        }
+        
+        .navbar-brand span {
+            background: linear-gradient(45deg, var(--primary) 30%, var(--primary-light) 90%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .navbar-brand .logo-icon {
+            color: var(--primary);
+            margin-right: 0.5rem;
+            font-size: 1.8rem;
+        }
+        
+        .nav-item {
+            position: relative;
+            margin: 0 0.25rem;
+        }
+        
+        .nav-link {
+            color: var(--gray-700) !important;
+            font-weight: 500;
+            padding: 0.7rem 1rem !important;
+            transition: all 0.3s ease;
+            border-radius: 6px;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary) !important;
+            background-color: rgba(106, 62, 161, 0.04);
+        }
+        
+        .nav-link.active {
+            color: var(--primary) !important;
+            background-color: rgba(106, 62, 161, 0.08);
+        }
+        
+        .nav-icon {
+            margin-right: 0.5rem;
+            font-size: 1.1rem;
+            color: var(--primary-light);
+        }
+        
+        .navbar-toggler {
+            border: none;
+            padding: 0.5rem;
+        }
+        
+        .navbar-toggler:focus {
+            box-shadow: none;
+            outline: none;
+        }
+        
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28106, 62, 161, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+        
+        /* Mobile menu */
+        @@media (max-width: 991px) {
+            .navbar-collapse {
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+                padding: 1rem;
+                margin-top: 0.5rem;
+            }
+            
+            .nav-link {
+                padding: 0.7rem 1rem !important;
+            }
+        }
+        
+        /* Main Content */
+        main {
+            min-height: calc(100vh - 180px);
+        }
+
+        .container {
+            max-width: 1280px;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #fbfbff;
+            border-top: 1px solid var(--gray-200);
+            padding: 3rem 0 2rem;
+            position: relative;
+        }
+        
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
+        }
+        
+        .footer h5 {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .footer h5::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            height: 2px;
+            width: 40px;
+            background-color: var(--primary-light);
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.7rem;
+        }
+        
+        .footer-links a {
+            color: var(--gray-600);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+            transform: translateX(3px);
+        }
+        
+        .footer-contact {
+            color: var(--gray-600);
+        }
+        
+        .footer-contact i {
+            color: var(--primary);
+            margin-right: 0.5rem;
+            width: 20px;
+            text-align: center;
+        }
+        
+        .footer-bottom {
+            background-color: #f3f3f7;
+            padding: 1rem 0;
+            color: var(--gray-600);
+            font-size: 0.9rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: white;
+            color: var(--primary);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .social-link:hover {
+            background-color: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        /* Buttons */
+        .btn {
+            border-radius: 6px;
+            padding: 0.6rem 1.5rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, var(--primary) 30%, var(--primary-light) 90%);
+            border: none;
+            box-shadow: 0 4px 10px rgba(106, 62, 161, 0.2);
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(45deg, var(--primary-dark) 30%, var(--primary) 90%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(106, 62, 161, 0.3);
+        }
+        
+        .btn-outline-primary {
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            background: transparent;
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">FerramentaAutismo</a>
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <i class="fas fa-puzzle-piece logo-icon"></i>
+                    <span>CentroEspectro</span>
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+                <div class="navbar-collapse collapse">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Index">
+                                <i class="fas fa-home nav-icon"></i>Início
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "Ferramentas" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Ferramentas">
+                                <i class="fas fa-tools nav-icon"></i>Ferramentas
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "Duvidas" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Duvidas">
+                                <i class="fas fa-question-circle nav-icon"></i>Dúvidas
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "Contatos" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Contatos">
+                                <i class="fas fa-address-book nav-icon"></i>Contatos
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "Sobre" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Sobre">
+                                <i class="fas fa-info-circle nav-icon"></i>Sobre
+                            </a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+    
+    <main role="main">
+        @RenderBody()
+    </main>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - FerramentaAutismo - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+    
+    
+    <!-- Back to top button -->
+    <a href="#" id="back-to-top" class="back-to-top d-flex align-items-center justify-content-center">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    
+    <script>
+        // Back to top button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 300) {
+                $('#back-to-top').fadeIn();
+            } else {
+                $('#back-to-top').fadeOut();
+            }
+        });
+        
+        $('#back-to-top').click(function(e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 500);
+            return false;
+        });
+        
+        // Add animation to elements when they become visible
+        function animateOnScroll() {
+            $('.animate__animated').each(function() {
+                const position = $(this).offset().top;
+                const scroll = $(window).scrollTop();
+                const windowHeight = $(window).height();
+                
+                if (scroll + windowHeight > position) {
+                    const animation = $(this).data('animation');
+                    $(this).addClass(animation);
+                }
+            });
+        }
+        
+        $(window).scroll(animateOnScroll);
+        $(document).ready(animateOnScroll);
+    </script>
+    
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
