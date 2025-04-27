@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FerramentaAutismo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+06ff7ab9591d2ecba5617024617693c2e24261f6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+71695999781e15deeec656cafa0f8389400bf780")]
 [assembly: System.Reflection.AssemblyProductAttribute("FerramentaAutismo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FerramentaAutismo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

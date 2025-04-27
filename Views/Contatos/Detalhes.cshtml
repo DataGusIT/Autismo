@@ -1,0 +1,532 @@
+﻿@model FerramentaAutismo.Models.Contato
+@{
+    ViewData["Title"] = Model.Nome + " - Detalhes do Contato";
+}
+
+<!-- Breadcrumb -->
+<nav aria-label="breadcrumb" class="bg-light py-2">
+    <div class="container">
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Início</a></li>
+            <li class="breadcrumb-item"><a asp-controller="Contatos" asp-action="Index">Contatos</a></li>
+            <li class="breadcrumb-item active" aria-current="page">@Model.Nome</li>
+        </ol>
+    </div>
+</nav>
+
+<!-- Detalhes do Contato -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Imagem e Informações Básicas -->
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <div class="card border-0 shadow-sm">
+                    <img src="@Model.ImagemUrl" alt="@Model.Nome" class="card-img-top" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge bg-primary">@Model.Tipo</span>
+                            <div class="rating">
+                                @for (int i = 0; i < Math.Floor(Model.Avaliacao); i++)
+                                {
+                                    <i class="fas fa-star text-warning"></i>
+                                }
+                                @if ((double)Model.Avaliacao % 1 >= 0.5)
+                                {
+                                    <i class="fas fa-star-half-alt text-warning"></i>
+                                }
+                                <small class="ms-1 text-muted">(@Model.Avaliacao)</small>
+                            </div>
+                        </div>
+
+                        <h4 class="card-title">@Model.Nome</h4>
+
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="tipo-icon me-2">
+                                <i class="@Model.IconeClasse text-primary"></i>
+                            </div>
+                            <small class="text-muted">@Model.Tipo</small>
+                        </div>
+
+                        <hr>
+
+                        <div class="contato-info">
+                            @if (!string.IsNullOrEmpty(Model.Endereco))
+                            {
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="icon-container me-3">
+                                        <i class="fas fa-map-marker-alt text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-0">Endereço</h6>
+                                        <p class="mb-0 text-muted">@Model.Endereco, @Model.Cidade - @Model.Estado</p>
+                                    </div>
+                                </div>
+                            }
+
+                            @if (!string.IsNullOrEmpty(Model.Telefone))
+                            {
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="icon-container me-3">
+                                        <i class="fas fa-phone text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-0">Telefone</h6>
+                                        <p class="mb-0 text-muted">@Model.Telefone</p>
+                                    </div>
+                                </div>
+                            }
+
+                            @if (!string.IsNullOrEmpty(Model.Email))
+                            {
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="icon-container me-3">
+                                        <i class="fas fa-envelope text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-0">E-mail</h6>
+                                        <p class="mb-0 text-muted">@Model.Email</p>
+                                    </div>
+                                </div>
+                            }
+
+                            @if (!string.IsNullOrEmpty(Model.WebsiteUrl))
+                            {
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="icon-container me-3">
+                                        <i class="fas fa-globe text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-0">Website</h6>
+                                        <p class="mb-0 text-muted">
+                                            <a href="@Model.WebsiteUrl" target="_blank" class="text-primary">@(Model.WebsiteUrl.Replace("https://", "").Replace("http://", ""))</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            }
+
+                            @if (!string.IsNullOrEmpty(Model.HorarioFuncionamento))
+                            {
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="icon-container me-3">
+                                        <i class="fas fa-clock text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-0">Horário de funcionamento</h6>
+                                        <p class="mb-0 text-muted">@Model.HorarioFuncionamento</p>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+
+                        <hr>
+
+                        <div class="d-flex justify-content-center gap-3 mt-3">
+                            @if (!string.IsNullOrEmpty(Model.Telefone))
+                            {
+                                <a href="tel:@Model.Telefone.Replace("(", "").Replace(")", "").Replace("-", "").Replace(" ", "")" class="btn btn-outline-primary">
+                                    <i class="fas fa-phone me-2"></i>Ligar
+                                </a>
+                            }
+
+                            @if (!string.IsNullOrEmpty(Model.Email))
+                            {
+                                <a href="mailto:@Model.Email" class="btn btn-outline-primary">
+                                    <i class="fas fa-envelope me-2"></i>E-mail
+                                </a>
+                            }
+
+                            @if (!string.IsNullOrEmpty(Model.WebsiteUrl))
+                            {
+                                <a href="@Model.WebsiteUrl" target="_blank" class="btn btn-outline-primary">
+                                    <i class="fas fa-globe me-2"></i>Website
+                                </a>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tipo de Atendimento -->
+                <div class="card border-0 shadow-sm mt-4">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Tipos de Atendimento</h5>
+                        <div class="d-flex flex-column gap-3">
+                            @if (Model.AtendimentoPresencial)
+                            {
+                                <div class="d-flex align-items-center">
+                                    <div class="tipo-atendimento-icon me-3">
+                                        <i class="fas fa-building text-success"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-0">Atendimento Presencial</h6>
+                                        <p class="mb-0 text-muted small">Disponível no endereço informado</p>
+                                    </div>
+                                </div>
+                            }
+
+                            @if (Model.AtendimentoOnline)
+                            {
+                                <div class="d-flex align-items-center">
+                                    <div class="tipo-atendimento-icon me-3">
+                                        <i class="fas fa-laptop text-info"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-0">Atendimento Online</h6>
+                                        <p class="mb-0 text-muted small">Disponível por videochamada</p>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Compartilhar -->
+                <div class="card border-0 shadow-sm mt-4">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Compartilhar</h5>
+                        <div class="d-flex justify-content-around">
+                            <a href="#" class="btn btn-sm btn-outline-primary" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href), '_blank')">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="btn btn-sm btn-outline-info" onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent('@Model.Nome - Contato especializado em TEA'), '_blank')">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="btn btn-sm btn-outline-success" onclick="window.open('https://api.whatsapp.com/send?text=' + encodeURIComponent('@Model.Nome - Contato especializado em TEA: ' + window.location.href), '_blank')">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary" onclick="navigator.clipboard.writeText(window.location.href); alert('Link copiado!');">
+                                <i class="fas fa-link"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detalhes e Mapa -->
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body p-4">
+                        <h4 class="mb-3">Sobre @Model.Nome</h4>
+                        <p class="text-muted">@Model.Descricao</p>
+
+                        <div class="alert alert-info mt-4 mb-4">
+                            <div class="d-flex">
+                                <div class="me-3">
+                                    <i class="fas fa-info-circle fa-2x text-info"></i>
+                                </div>
+                                <div>
+                                    <h6 class="alert-heading">Informação importante</h6>
+                                    <p class="mb-0">Os dados apresentados nesta página são apenas informativos. Recomendamos confirmar a disponibilidade, horários e condições de atendimento diretamente com o contato.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Serviços oferecidos (exemplo) -->
+                        <h5 class="mb-3 mt-4">Serviços oferecidos</h5>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="service-icon me-3">
+                                        <i class="fas fa-check-circle text-success"></i>
+                                    </div>
+                                    <span>Diagnóstico especializado</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="service-icon me-3">
+                                        <i class="fas fa-check-circle text-success"></i>
+                                    </div>
+                                    <span>Terapia comportamental</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="service-icon me-3">
+                                        <i class="fas fa-check-circle text-success"></i>
+                                    </div>
+                                    <span>Terapia ocupacional</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="service-icon me-3">
+                                        <i class="fas fa-check-circle text-success"></i>
+                                    </div>
+                                    <span>Fonoaudiologia</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="service-icon me-3">
+                                        <i class="fas fa-check-circle text-success"></i>
+                                    </div>
+                                    <span>Acompanhamento psicológico</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="service-icon me-3">
+                                        <i class="fas fa-check-circle text-success"></i>
+                                    </div>
+                                    <span>Orientação familiar</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mapa -->
+                @if (!string.IsNullOrEmpty(Model.Endereco) && !string.IsNullOrEmpty(Model.Cidade))
+                {
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-body p-4">
+                            <h5 class="mb-3">Localização</h5>
+                            <div class="mapa-container rounded" style="height: 350px; overflow: hidden;">
+                                <!-- Aqui incluiria um iframe do Google Maps ou outra API de mapas -->
+                                <div class="bg-light d-flex justify-content-center align-items-center h-100 border rounded">
+                                    <div class="text-center">
+                                        <i class="fas fa-map-marked-alt fa-3x text-primary mb-3"></i>
+                                        <h6>@Model.Endereco</h6>
+                                        <p class="mb-0">@Model.Cidade, @Model.Estado</p>
+                                        <a href="https://www.google.com/maps/search/?api=1&query=@Uri.EscapeDataString(Model.Endereco + ", " + Model.Cidade + " - " + Model.Estado)" target="_blank" class="btn btn-sm btn-primary mt-3">
+                                            <i class="fas fa-directions me-2"></i>Ver no Google Maps
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                <!-- Avaliações -->
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h5 class="mb-0">Avaliações e Comentários</h5>
+                            <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#avaliarModal">
+                                <i class="fas fa-star me-2"></i>Avaliar
+                            </button>
+                        </div>
+
+                        <!-- Exemplo de avaliações -->
+                        <div class="avaliacao-item mb-4">
+                            <div class="d-flex mb-2">
+                                <div class="avatar me-3">
+                                    <div class="rounded-circle bg-primary text-white d-flex justify-content-center align-items-center" style="width: 48px; height: 48px;">
+                                        <span>MC</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Maria Carvalho</h6>
+                                    <div class="d-flex align-items-center">
+                                        <div class="rating me-2">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                        </div>
+                                        <small class="text-muted">Há 3 meses</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="mb-0">Excelente atendimento! A equipe é muito atenciosa e especializada. Meu filho teve um progresso significativo após iniciar o acompanhamento.</p>
+                        </div>
+
+                        <div class="avaliacao-item mb-4">
+                            <div class="d-flex mb-2">
+                                <div class="avatar me-3">
+                                    <div class="rounded-circle bg-info text-white d-flex justify-content-center align-items-center" style="width: 48px; height: 48px;">
+                                        <span>JS</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">João Silva</h6>
+                                    <div class="d-flex align-items-center">
+                                        <div class="rating me-2">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="far fa-star text-warning"></i>
+                                        </div>
+                                        <small class="text-muted">Há 5 meses</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="mb-0">Muito bom. Os profissionais são muito bem preparados e oferecem um atendimento personalizado. Recomendo fortemente.</p>
+                        </div>
+
+                        <a href="#" class="btn btn-link text-primary">Ver mais avaliações</a>
+                    </div>
+                </div>
+
+                <!-- Contatos Relacionados -->
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h5 class="mb-3">Contatos Relacionados</h5>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="card h-100 bg-light border-0">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0 me-3">
+                                                <div class="rounded-circle bg-primary d-flex justify-content-center align-items-center text-white" style="width: 48px; height: 48px;">
+                                                    <i class="fas fa-user-md"></i>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 class="mb-0">Dra. Mariana Silva</h6>
+                                                <small class="text-muted">Neuropsicóloga</small>
+                                                <div class="mt-2">
+                                                    <a href="#" class="btn btn-sm btn-outline-primary">Ver perfil</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 bg-light border-0">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0 me-3">
+                                                <div class="rounded-circle bg-success d-flex justify-content-center align-items-center text-white" style="width: 48px; height: 48px;">
+                                                    <i class="fas fa-hands-helping"></i>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 class="mb-0">Associação Amigos do Autismo</h6>
+                                                <small class="text-muted">Associação</small>
+                                                <div class="mt-2">
+                                                    <a href="#" class="btn btn-sm btn-outline-primary">Ver perfil</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal Avaliar -->
+<div class="modal fade" id="avaliarModal" tabindex="-1" aria-labelledby="avaliarModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="avaliarModalLabel">Avaliar @Model.Nome</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4">
+                <form id="formAvaliacao">
+                    <div class="mb-4 text-center">
+                        <h6 class="mb-3">Sua avaliação</h6>
+                        <div class="rating-input d-flex justify-content-center gap-2 fs-3">
+                            <i class="far fa-star text-warning" data-value="1"></i>
+                            <i class="far fa-star text-warning" data-value="2"></i>
+                            <i class="far fa-star text-warning" data-value="3"></i>
+                            <i class="far fa-star text-warning" data-value="4"></i>
+                            <i class="far fa-star text-warning" data-value="5"></i>
+                        </div>
+                        <input type="hidden" id="ratingValue" value="0">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Seu nome</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Seu e-mail</label>
+                        <input type="email" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Comentário</label>
+                        <textarea class="form-control" rows="4" required></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" id="btnEnviarAvaliacao">
+                    <i class="fas fa-paper-plane me-2"></i>Enviar avaliação
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            // Sistema de avaliação por estrelas
+            $(".rating-input i").click(function() {
+                const value = $(this).data("value");
+                $("#ratingValue").val(value);
+
+                // Atualizar visual das estrelas
+                $(".rating-input i").removeClass("fas").addClass("far");
+                $(".rating-input i").each(function() {
+                    if ($(this).data("value") <= value) {
+                        $(this).removeClass("far").addClass("fas");
+                    }
+                });
+            });
+
+            // Efeito hover nas estrelas
+            $(".rating-input i").hover(
+                function() {
+                    const hoverValue = $(this).data("value");
+                    $(".rating-input i").each(function() {
+                        if ($(this).data("value") <= hoverValue) {
+                            $(this).removeClass("far").addClass("fas");
+                        }
+                    });
+                },
+                function() {
+                    const currentValue = $("#ratingValue").val();
+                    $(".rating-input i").removeClass("fas").addClass("far");
+                    $(".rating-input i").each(function() {
+                        if ($(this).data("value") <= currentValue) {
+                            $(this).removeClass("far").addClass("fas");
+                        }
+                    });
+                }
+            );
+
+            // Enviar avaliação
+            $("#btnEnviarAvaliacao").click(function() {
+                // Validar formulário
+                if ($("#formAvaliacao")[0].checkValidity()) {
+                    if ($("#ratingValue").val() == "0") {
+                        alert("Por favor, selecione uma avaliação");
+                        return;
+                    }
+
+                    // Aqui você adicionaria o código para enviar a avaliação
+
+                    // Fechar modal
+                    $("#avaliarModal").modal('hide');
+
+                    // Mensagem de sucesso
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Avaliação enviada!',
+                        text: 'Agradecemos por compartilhar sua experiência.',
+                        confirmButtonColor: '#3085d6'
+                    });
+
+                    // Limpar formulário
+                    $("#formAvaliacao")[0].reset();
+                    $("#ratingValue").val("0");
+                    $(".rating-input i").removeClass("fas").addClass("far");
+                } else {
+                    $("#formAvaliacao")[0].reportValidity();
+                }
+            });
+        });
+    </script>
+}

@@ -7,6 +7,26 @@
       "RelativeMoniker": "D:0:0:{35DBCC6B-7ABA-4186-BA0D-6C13D16BAC4B}|FerramentaAutismo.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{35DBCC6B-7ABA-4186-BA0D-6C13D16BAC4B}|FerramentaAutismo.csproj|c:\\users\\gusta\\source\\repos\\ferramentaautismo\\views\\contatos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{35DBCC6B-7ABA-4186-BA0D-6C13D16BAC4B}|FerramentaAutismo.csproj|solutionrelative:views\\contatos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35DBCC6B-7ABA-4186-BA0D-6C13D16BAC4B}|FerramentaAutismo.csproj|c:\\users\\gusta\\source\\repos\\ferramentaautismo\\models\\contatos\\contatosviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35DBCC6B-7ABA-4186-BA0D-6C13D16BAC4B}|FerramentaAutismo.csproj|solutionrelative:models\\contatos\\contatosviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35DBCC6B-7ABA-4186-BA0D-6C13D16BAC4B}|FerramentaAutismo.csproj|c:\\users\\gusta\\source\\repos\\ferramentaautismo\\models\\contatos\\contato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35DBCC6B-7ABA-4186-BA0D-6C13D16BAC4B}|FerramentaAutismo.csproj|solutionrelative:models\\contatos\\contato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35DBCC6B-7ABA-4186-BA0D-6C13D16BAC4B}|FerramentaAutismo.csproj|c:\\users\\gusta\\source\\repos\\ferramentaautismo\\views\\contatos\\detalhes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{35DBCC6B-7ABA-4186-BA0D-6C13D16BAC4B}|FerramentaAutismo.csproj|solutionrelative:views\\contatos\\detalhes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35DBCC6B-7ABA-4186-BA0D-6C13D16BAC4B}|FerramentaAutismo.csproj|c:\\users\\gusta\\source\\repos\\ferramentaautismo\\controllers\\contatoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35DBCC6B-7ABA-4186-BA0D-6C13D16BAC4B}|FerramentaAutismo.csproj|solutionrelative:controllers\\contatoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{35DBCC6B-7ABA-4186-BA0D-6C13D16BAC4B}|FerramentaAutismo.csproj|c:\\users\\gusta\\source\\repos\\ferramentaautismo\\controllers\\faq\\duvidascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{35DBCC6B-7ABA-4186-BA0D-6C13D16BAC4B}|FerramentaAutismo.csproj|solutionrelative:controllers\\faq\\duvidascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -86,24 +106,80 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 8,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DuvidasViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Models\\FAQ\\DuvidasViewModel.cs",
-              "RelativeDocumentMoniker": "Models\\FAQ\\DuvidasViewModel.cs",
-              "ToolTip": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Models\\FAQ\\DuvidasViewModel.cs",
-              "RelativeToolTip": "Models\\FAQ\\DuvidasViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T02:44:33.471Z",
+              "DocumentIndex": 4,
+              "Title": "Detalhes.cshtml",
+              "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Views\\Contatos\\Detalhes.cshtml",
+              "RelativeDocumentMoniker": "Views\\Contatos\\Detalhes.cshtml",
+              "ToolTip": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Views\\Contatos\\Detalhes.cshtml",
+              "RelativeToolTip": "Views\\Contatos\\Detalhes.cshtml",
+              "ViewState": "AgIAAAYCAAAAAAAAAAAAACAAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-27T03:20:22.071Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Views\\Contatos\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Contatos\\Index.cshtml",
+              "ToolTip": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Views\\Contatos\\Index.cshtml",
+              "RelativeToolTip": "Views\\Contatos\\Index.cshtml",
+              "ViewState": "AgIAAPgBAAAAAAAAAAAAAN8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-27T03:15:47.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ContatosController.cs",
+              "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Controllers\\ContatosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ContatosController.cs",
+              "ToolTip": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Controllers\\ContatosController.cs",
+              "RelativeToolTip": "Controllers\\ContatosController.cs",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAAwKgAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T03:14:53.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ContatosViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Models\\Contatos\\ContatosViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\Contatos\\ContatosViewModel.cs",
+              "ToolTip": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Models\\Contatos\\ContatosViewModel.cs",
+              "RelativeToolTip": "Models\\Contatos\\ContatosViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T03:14:01.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Contato.cs",
+              "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Models\\Contatos\\Contato.cs",
+              "RelativeDocumentMoniker": "Models\\Contatos\\Contato.cs",
+              "ToolTip": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Models\\Contatos\\Contato.cs",
+              "RelativeToolTip": "Models\\Contatos\\Contato.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T03:12:41.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -111,16 +187,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T02:28:42.062Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "WhenOpened": "2025-04-27T02:28:42.062Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "DuvidasController.cs",
               "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Controllers\\FAQ\\DuvidasController.cs",
               "RelativeDocumentMoniker": "Controllers\\FAQ\\DuvidasController.cs",
@@ -128,21 +199,7 @@
               "RelativeToolTip": "Controllers\\FAQ\\DuvidasController.cs",
               "ViewState": "AgIAAIsAAAAAAAAAAAAAAIsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T01:57:38.084Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAIoAAAAAAAAAAAAAAJsAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T01:28:54.477Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T01:57:38.084Z"
             },
             {
               "$type": "Document",
@@ -152,14 +209,38 @@
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAB8BAAAAAAAAAAAAADMBAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAB8BAAAAAAAAAAAAADABAACmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-26T21:24:14.19Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
+              "Title": "DuvidasViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Models\\FAQ\\DuvidasViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\FAQ\\DuvidasViewModel.cs",
+              "ToolTip": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Models\\FAQ\\DuvidasViewModel.cs",
+              "RelativeToolTip": "Models\\FAQ\\DuvidasViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T02:44:33.471Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAAAJsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T01:28:54.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "FerramentasController.cs",
               "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Controllers\\Ferramentas\\FerramentasController.cs",
               "RelativeDocumentMoniker": "Controllers\\Ferramentas\\FerramentasController.cs",
@@ -167,12 +248,11 @@
               "RelativeToolTip": "Controllers\\Ferramentas\\FerramentasController.cs",
               "ViewState": "AgIAAEIAAAAAAAAAAAAAAEsAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T01:06:41.941Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T01:06:41.941Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Views\\Duvidas\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Duvidas\\Index.cshtml",
@@ -180,12 +260,11 @@
               "RelativeToolTip": "Views\\Duvidas\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-27T01:59:16.202Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T01:59:16.202Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -193,12 +272,11 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-27T02:29:19.168Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T02:29:19.168Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "FAQ.cs",
               "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Models\\FAQ\\FAQ.cs",
               "RelativeDocumentMoniker": "Models\\FAQ\\FAQ.cs",
@@ -206,12 +284,11 @@
               "RelativeToolTip": "Models\\FAQ\\FAQ.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T01:53:23.972Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T01:53:23.972Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "Ferramenta.cs",
               "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Models\\Ferramentas\\Ferramenta.cs",
               "RelativeDocumentMoniker": "Models\\Ferramentas\\Ferramenta.cs",
@@ -219,12 +296,11 @@
               "RelativeToolTip": "Models\\Ferramentas\\Ferramenta.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T01:05:32.237Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T01:05:32.237Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "FerramentasViewModel.cs",
               "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Models\\Ferramentas\\FerramentasViewModel.cs",
               "RelativeDocumentMoniker": "Models\\Ferramentas\\FerramentasViewModel.cs",
@@ -236,7 +312,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "Detalhes.cshtml",
               "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Views\\Ferramentas\\Detalhes.cshtml",
               "RelativeDocumentMoniker": "Views\\Ferramentas\\Detalhes.cshtml",
@@ -244,12 +320,11 @@
               "RelativeToolTip": "Views\\Ferramentas\\Detalhes.cshtml",
               "ViewState": "AgIAADwBAAAAAAAAAAAAwGABAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-27T01:13:29.941Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T01:13:29.941Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Views\\Ferramentas\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Ferramentas\\Index.cshtml",
@@ -261,7 +336,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
@@ -273,7 +348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -285,7 +360,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 20,
               "Title": "_Layout.cshtml.css",
               "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\Views\\Shared\\_Layout.cshtml.css",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml.css",
@@ -297,7 +372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 21,
               "Title": "style.css",
               "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\wwwroot\\css\\Home\\style.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\Home\\style.css",
@@ -309,7 +384,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 22,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
@@ -321,7 +396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 23,
               "Title": "FerramentaAutismo.csproj",
               "DocumentMoniker": "C:\\Users\\gusta\\source\\repos\\FerramentaAutismo\\FerramentaAutismo.csproj",
               "RelativeDocumentMoniker": "FerramentaAutismo.csproj",
