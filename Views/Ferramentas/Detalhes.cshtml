@@ -1,0 +1,411 @@
+﻿@model FerramentaAutismo.Models.Ferramenta
+@{
+    ViewData["Title"] = Model.Nome;
+}
+
+<!-- Hero Section -->
+<section class="page-header">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Início</a></li>
+                        <li class="breadcrumb-item"><a asp-controller="Ferramentas" asp-action="Index">Ferramentas</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">@Model.Nome</li>
+                    </ol>
+                </nav>
+                <h1 class="page-title">@Model.Nome</h1>
+            </div>
+            <div class="col-md-6 text-end">
+                <div class="d-flex justify-content-end align-items-center">
+                    <div class="ratings me-3">
+                        @for (int i = 1; i <= 5; i++)
+                        {
+                            if (i <= Math.Floor(Model.Classificacao))
+                            {
+                                <i class="fas fa-star text-warning"></i>
+                            }
+                            else if (i - Model.Classificacao < 1 && i - Model.Classificacao > 0)
+                            {
+                                <i class="fas fa-star-half-alt text-warning"></i>
+                            }
+                            else
+                            {
+                                <i class="far fa-star text-warning"></i>
+                            }
+                        }
+                        <span class="ms-1">(@Model.Classificacao)</span>
+                    </div>
+                    <div>
+                        <span class="badge bg-primary">@Model.Tipo</span>
+                        @if (Model.EhGratuita)
+                        {
+                            <span class="badge bg-success ms-2">Gratuito</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-secondary ms-2">Pago</span>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Detalhes Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title"><i class="@Model.IconeClasse me-2"></i>Sobre esta ferramenta</h2>
+                        <div class="card-text mb-4">
+                            <p class="lead">@Model.Descricao</p>
+
+                            <!-- Informações adicionais fictícias para completar a página de detalhes -->
+                            <h3 class="mt-4">Como funciona?</h3>
+                            <p>
+                                Esta ferramenta foi desenvolvida para atender às necessidades específicas das pessoas com TEA,
+                                proporcionando suporte no desenvolvimento e aprendizado. Com uma abordagem estruturada e
+                                adaptativa, a ferramenta se ajusta às necessidades individuais de cada usuário.
+                            </p>
+
+                            <h3 class="mt-4">Benefícios</h3>
+                            <ul>
+                                <li>Promove o desenvolvimento de habilidades sociais e comunicativas</li>
+                                <li>Facilita a compreensão de conceitos abstratos</li>
+                                <li>Proporciona maior autonomia e independência</li>
+                                <li>Reduz a ansiedade e comportamentos desafiadores</li>
+                                <li>Adaptável a diferentes níveis de desenvolvimento</li>
+                            </ul>
+
+                            <h3 class="mt-4">Orientações de uso</h3>
+                            <p>
+                                Recomenda-se iniciar com sessões curtas e gradualmente aumentar o tempo de uso conforme
+                                a familiaridade com a ferramenta. É importante respeitar o ritmo individual e observar as
+                                respostas da pessoa com TEA ao utilizar a ferramenta. O acompanhamento de um profissional
+                                especializado pode ser benéfico para maximizar os resultados.
+                            </p>
+                        </div>
+
+                        @if (!string.IsNullOrEmpty(Model.UrlAcesso) && Model.UrlAcesso != "#")
+                        {
+                            <a href="@Model.UrlAcesso" class="btn btn-primary" target="_blank">
+                                <i class="fas fa-external-link-alt me-2"></i>Acessar ferramenta
+                            </a>
+                        }
+                        else
+                        {
+                            <div class="alert alert-info">
+                                <i class="fas fa-info-circle me-2"></i>
+                                Esta ferramenta pode ser adquirida através de distribuidores especializados ou
+                                diretamente com profissionais da área. Entre em contato com nossa equipe para
+                                mais informações.
+                            </div>
+                        }
+                    </div>
+                </div>
+
+                <!-- Vídeo Explicativo (fictício) -->
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title"><i class="fas fa-video me-2"></i>Vídeo explicativo</h2>
+                        <div class="ratio ratio-16x9 mt-3">
+                            <div class="bg-light d-flex align-items-center justify-content-center">
+                                <div class="text-center">
+                                    <i class="fas fa-film fa-3x text-secondary mb-3"></i>
+                                    <p>Vídeo demonstrativo em breve</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimentos (fictícios) -->
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h2 class="card-title"><i class="fas fa-comment-alt me-2"></i>Depoimentos</h2>
+
+                        <div class="testimonial-card mt-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="avatar-placeholder bg-primary text-white me-3">
+                                    <span>MC</span>
+                                </div>
+                                <div>
+                                    <h5 class="mb-0">Maria C.</h5>
+                                    <div class="text-muted">Mãe de um aluno</div>
+                                </div>
+                            </div>
+                            <div class="testimonial-text">
+                                <p>
+                                    "Esta ferramenta transformou a rotina do meu filho. Ele agora consegue se comunicar
+                                    muito melhor e demonstra maior independência nas atividades diárias. Recomendo fortemente
+                                    para outras famílias."
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card mt-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="avatar-placeholder bg-info text-white me-3">
+                                    <span>RL</span>
+                                </div>
+                                <div>
+                                    <h5 class="mb-0">Ricardo L.</h5>
+                                    <div class="text-muted">Professor</div>
+                                </div>
+                            </div>
+                            <div class="testimonial-text">
+                                <p>
+                                    "Como educador, posso afirmar que esta ferramenta tem sido fundamental no desenvolvimento
+                                    dos meus alunos com TEA. A facilidade de uso e adaptabilidade às diferentes necessidades
+                                    fazem toda a diferença no ambiente escolar."
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button class="btn btn-outline-primary">
+                                Ver mais depoimentos <i class="fas fa-chevron-down ms-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <!-- Informações Laterais -->
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title"><i class="fas fa-info-circle me-2"></i>Informações</h4>
+
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span><i class="fas fa-users me-2"></i>Público Alvo:</span>
+                                <span class="text-primary">@Model.PublicoAlvo</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span><i class="fas fa-tag me-2"></i>Tipo:</span>
+                                <span class="text-primary">@Model.Tipo</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span><i class="fas fa-dollar-sign me-2"></i>Gratuito:</span>
+                                <span>@(Model.EhGratuita ? "Sim" : "Não")</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span><i class="fas fa-calendar-alt me-2"></i>Adicionado em:</span>
+                                <span>@Model.DataCadastro.ToString("dd/MM/yyyy")</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ferramentas Relacionadas -->
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title"><i class="fas fa-puzzle-piece me-2"></i>Ferramentas Relacionadas</h4>
+
+                        <div class="related-tools mt-3">
+                            <div class="related-tool-item d-flex align-items-center p-2 border-bottom">
+                                <div class="tool-icon me-3">
+                                    <i class="fas fa-comment-dots text-primary"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">PECS - Sistema de Comunicação</h6>
+                                    <small class="text-muted">Comunicação</small>
+                                </div>
+                            </div>
+
+                            <div class="related-tool-item d-flex align-items-center p-2 border-bottom">
+                                <div class="tool-icon me-3">
+                                    <i class="fas fa-brain text-primary"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">ABA - Análise do Comportamento</h6>
+                                    <small class="text-muted">Comportamental</small>
+                                </div>
+                            </div>
+
+                            <div class="related-tool-item d-flex align-items-center p-2">
+                                <div class="tool-icon me-3">
+                                    <i class="fas fa-mobile-alt text-primary"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Aplicativos de CAA</h6>
+                                    <small class="text-muted">Tecnologia Assistiva</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recursos para Download -->
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h4 class="card-title"><i class="fas fa-download me-2"></i>Recursos</h4>
+
+                        <div class="mt-3">
+                            <a href="#" class="download-link d-block p-2 border-bottom">
+                                <i class="fas fa-file-pdf me-2 text-danger"></i>
+                                Manual de utilização <small class="text-muted">(PDF)</small>
+                            </a>
+
+                            <a href="#" class="download-link d-block p-2 border-bottom">
+                                <i class="fas fa-file-powerpoint me-2 text-warning"></i>
+                                Apresentação <small class="text-muted">(PPT)</small>
+                            </a>
+
+                            <a href="#" class="download-link d-block p-2">
+                                <i class="fas fa-image me-2 text-success"></i>
+                                Cartões ilustrativos <small class="text-muted">(ZIP)</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <div class="cta-content">
+                    <h2 class="cta-title">Precisa de suporte com esta ferramenta?</h2>
+                    <p class="cta-description">
+                        Nossa equipe de especialistas está disponível para orientar você no uso desta e outras ferramentas para TEA.
+                        Agende uma reunião de orientação ou participe de nossos workshops.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-5 text-center text-lg-end">
+                <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-end">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-calendar-check me-2"></i>Agendar orientação
+                    </a>
+                    <a href="#" class="btn btn-outline-primary">
+                        <i class="fas fa-users me-2"></i>Ver workshops
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Styles {
+    <style>
+        /* Page Header */
+        .page-header {
+            background-color: #f8f9fa;
+            padding: 30px 0;
+            border-bottom: 1px solid #e9ecef;
+            margin-bottom: 30px;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #212529;
+            margin-bottom: 0;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background-color: transparent;
+            padding: 0;
+            margin-bottom: 10px;
+        }
+
+        .breadcrumb-item + .breadcrumb-item::before {
+            content: ">";
+        }
+
+        .breadcrumb-item a {
+            color: #0d6efd;
+            text-decoration: none;
+        }
+
+        .breadcrumb-item.active {
+            color: #6c757d;
+        }
+
+        /* Ratings */
+        .ratings {
+            font-size: 0.9rem;
+        }
+
+        /* Animation Delay Utilities */
+        [data-delay="200"] {
+            animation-delay: 0.2s;
+        }
+
+        [data-delay="400"] {
+            animation-delay: 0.4s;
+        }
+
+        [data-delay="600"] {
+            animation-delay: 0.6s;
+        }
+
+        .avatar-placeholder {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .testimonial-card {
+            border-left: 4px solid #0d6efd;
+            padding-left: 1rem;
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+
+        .related-tool-item:hover {
+            background-color: #f8f9fa;
+            cursor: pointer;
+        }
+
+        .download-link {
+            text-decoration: none;
+            color: #212529;
+            transition: all 0.2s;
+        }
+
+        .download-link:hover {
+            background-color: #f8f9fa;
+            color: #0d6efd;
+        }
+    </style>
+}
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            // Botão "Ver mais depoimentos"
+            $('button:contains("Ver mais depoimentos")').click(function() {
+                alert('Funcionalidade em desenvolvimento. Mais depoimentos serão adicionados em breve.');
+            });
+
+            // Botões de download
+            $('.download-link').click(function(e) {
+                e.preventDefault();
+                alert('Este recurso estará disponível em breve. Estamos preparando materiais de alta qualidade para você.');
+            });
+
+            // Ferramentas relacionadas
+            $('.related-tool-item').click(function() {
+                alert('Funcionalidade de navegação entre ferramentas relacionadas em implementação.');
+            });
+        });
+    </script>
+}

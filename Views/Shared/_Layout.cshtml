@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    @RenderSection("Styles", required: false)
     <style>
         :root {
             --primary: #6a3ea1;
@@ -291,12 +292,12 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "Ferramentas" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Ferramentas">
+                            <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "Ferramentas" ? "active" : "")" asp-area="" asp-controller="Ferramentas" asp-action="Index">
                                 <i class="fas fa-tools nav-icon"></i>Ferramentas
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "Duvidas" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Duvidas">
+                            <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "Duvidas" ? "active" : "")" asp-area="" asp-controller="Ferramentas" asp-action="Index">
                                 <i class="fas fa-question-circle nav-icon"></i>Dúvidas
                             </a>
                         </li>
