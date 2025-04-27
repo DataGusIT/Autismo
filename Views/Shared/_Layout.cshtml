@@ -287,7 +287,7 @@
                 <div class="navbar-collapse collapse">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Index">
+                            <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "Home" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Index">
                                 <i class="fas fa-home nav-icon"></i>Início
                             </a>
                         </li>
@@ -297,18 +297,13 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "Duvidas" ? "active" : "")" asp-area="" asp-controller="Ferramentas" asp-action="Index">
+                            <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "FAQ" ? "active" : "")" asp-area="" asp-controller="Duvidas" asp-action="Index">
                                 <i class="fas fa-question-circle nav-icon"></i>Dúvidas
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "Contatos" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Contatos">
                                 <i class="fas fa-address-book nav-icon"></i>Contatos
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link @(ViewContext.RouteData.Values["Action"].ToString() == "Sobre" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Sobre">
-                                <i class="fas fa-info-circle nav-icon"></i>Sobre
                             </a>
                         </li>
                     </ul>
